@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
-import { Star, ExternalLink, TreePine, Filter } from 'lucide-react'
+import Link from 'next/link'
+import { Star, ExternalLink, TreePine } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Waldbaden Produkte - Malbücher, Bücher & Zubehör | Waldbaden Guide',
@@ -17,29 +18,29 @@ const products = [
         rating: 4.8,
         reviews: 234,
         image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&h=500&fit=crop',
-        amazonLink: 'https://amazon.de/dp/example1',
+        amazonLink: 'https://www.amazon.de/s?k=waldbaden+malbuch+erwachsene&tag=waldbadenguide-21',
         badge: 'Bestseller',
         description: '50 wunderschöne Waldmotive zum Entspannen und Loslassen.'
       },
       {
-        title: 'Waldgeister & Baumseelen',
+        title: 'Wald Malbuch Natur',
         subtitle: 'Mystische Waldwelten',
         price: '14,99 €',
         rating: 4.9,
         reviews: 187,
         image: 'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=400&h=500&fit=crop',
-        amazonLink: 'https://amazon.de/dp/example2',
+        amazonLink: 'https://www.amazon.de/s?k=wald+malbuch+natur+erwachsene&tag=waldbadenguide-21',
         badge: 'Neu',
         description: 'Tauche ein in magische Waldwelten voller Naturgeister.'
       },
       {
-        title: 'Der Deutsche Wald',
+        title: 'Der Deutsche Wald Malbuch',
         subtitle: 'Achtsame Naturmomente',
         price: '13,99 €',
         rating: 4.7,
         reviews: 156,
         image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=400&h=500&fit=crop',
-        amazonLink: 'https://amazon.de/dp/example3',
+        amazonLink: 'https://www.amazon.de/s?k=deutscher+wald+malbuch&tag=waldbadenguide-21',
         description: 'Heimische Waldszenen zum meditativen Ausmalen.'
       },
     ]
@@ -54,18 +55,18 @@ const products = [
         rating: 4.8,
         reviews: 892,
         image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=500&fit=crop',
-        amazonLink: 'https://amazon.de/dp/example4',
+        amazonLink: 'https://www.amazon.de/s?k=shinrin+yoku+qing+li&tag=waldbadenguide-21',
         badge: 'Empfehlung',
         description: 'Der Klassiker vom führenden Waldbaden-Forscher.'
       },
       {
-        title: 'Waldbaden Praxisbuch',
-        subtitle: 'Mit 50 Übungen',
+        title: 'Waldbaden Buch',
+        subtitle: 'Mit praktischen Übungen',
         price: '18,99 €',
         rating: 4.6,
         reviews: 234,
         image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=500&fit=crop',
-        amazonLink: 'https://amazon.de/dp/example5',
+        amazonLink: 'https://www.amazon.de/s?k=waldbaden+buch&tag=waldbadenguide-21',
         description: 'Praktische Anleitungen für jede Jahreszeit.'
       },
     ]
@@ -74,13 +75,13 @@ const products = [
     category: 'Tagebücher & Journals',
     items: [
       {
-        title: 'Shinrin-Yoku Tagebuch',
+        title: 'Natur Tagebuch',
         subtitle: 'Für achtsame Waldmomente',
         price: '14,99 €',
         rating: 4.7,
         reviews: 156,
         image: 'https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=400&h=500&fit=crop',
-        amazonLink: 'https://amazon.de/dp/example6',
+        amazonLink: 'https://www.amazon.de/s?k=natur+tagebuch+achtsamkeit&tag=waldbadenguide-21',
         description: 'Halte deine Walderlebnisse und Gedanken fest.'
       },
       {
@@ -90,7 +91,7 @@ const products = [
         rating: 4.9,
         reviews: 89,
         image: 'https://images.unsplash.com/photo-1517842645767-c639042777db?w=400&h=500&fit=crop',
-        amazonLink: 'https://amazon.de/dp/example7',
+        amazonLink: 'https://www.amazon.de/s?k=naturtagebuch+jahresplaner&tag=waldbadenguide-21',
         badge: 'Premium',
         description: 'Begleite die Jahreszeiten mit täglichen Impulsen.'
       },
@@ -100,23 +101,23 @@ const products = [
     category: 'Zubehör',
     items: [
       {
-        title: 'Waldbaden Sitzkissen',
+        title: 'Outdoor Sitzkissen',
         subtitle: 'Wasserdicht & tragbar',
         price: '24,99 €',
         rating: 4.5,
         reviews: 178,
         image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=500&fit=crop',
-        amazonLink: 'https://amazon.de/dp/example8',
+        amazonLink: 'https://www.amazon.de/s?k=outdoor+sitzkissen+wasserdicht&tag=waldbadenguide-21',
         description: 'Bequem sitzen überall im Wald.'
       },
       {
-        title: 'Aromatherapie Waldduft Set',
+        title: 'Ätherische Öle Wald Set',
         subtitle: '100% natürliche ätherische Öle',
         price: '29,99 €',
         rating: 4.8,
         reviews: 312,
         image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=500&fit=crop',
-        amazonLink: 'https://amazon.de/dp/example9',
+        amazonLink: 'https://www.amazon.de/s?k=%C3%A4therische+%C3%B6le+wald+zirbe+tanne&tag=waldbadenguide-21',
         badge: 'Bestseller',
         description: 'Bringe den Waldduft nach Hause: Zirbe, Tanne, Fichte.'
       },
@@ -203,14 +204,14 @@ export default function ProduktePage() {
                       <p className="text-sm text-gray-600 mb-4 flex-1">{product.description}</p>
                       
                       <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                        <span className="text-xl font-bold text-forest-700">{product.price}</span>
+                        <span className="text-xl font-bold text-forest-700">ab {product.price}</span>
                         <a
                           href={product.amazonLink}
                           target="_blank"
                           rel="noopener noreferrer nofollow"
                           className="amazon-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm"
                         >
-                          Bei Amazon* <ExternalLink className="w-3 h-3" />
+                          Auf Amazon* <ExternalLink className="w-3 h-3" />
                         </a>
                       </div>
                     </div>
@@ -231,12 +232,12 @@ export default function ProduktePage() {
           <p className="text-gray-600 mb-6">
             Stöbere in unserem Blog für kostenlose Tipps und Anleitungen zum Waldbaden.
           </p>
-          <a
-            href="/blog"
+          <Link
+            href="/blog/"
             className="inline-flex items-center gap-2 px-6 py-3 bg-forest-600 text-white font-medium rounded-full hover:bg-forest-700 transition-colors"
           >
             Zum Blog
-          </a>
+          </Link>
         </div>
       </section>
     </main>

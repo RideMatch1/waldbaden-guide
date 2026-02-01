@@ -112,7 +112,7 @@ export default function BlogPage() {
                 key={index}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group"
               >
-                <Link href={`/blog/${post.slug}`}>
+                <Link href={`/blog/${post.slug}/`}>
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={post.image}

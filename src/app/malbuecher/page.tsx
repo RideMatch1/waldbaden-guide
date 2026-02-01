@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Star, ExternalLink, Palette, Sparkles, Heart, Brain } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Waldbaden Malbücher - Heilende Waldszenen zum Ausmalen | Waldbaden Guide',
-  description: 'Entdecke unsere Waldbaden Malbücher für Erwachsene: Waldgeister, Baumseelen und mystische Naturmotive. Kreative Entspannung trifft Shinrin-Yoku.',
+  description: 'Entdecke unsere Waldbaden Malbücher für Erwachsene: Waldmotive, Baumszenen und mystische Naturmotive. Kreative Entspannung trifft Shinrin-Yoku.',
 }
 
 const benefits = [
@@ -21,19 +22,19 @@ const malbuecher = [
     rating: 4.8,
     reviews: 234,
     image: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=800&fit=crop',
-    amazonLink: 'https://amazon.de/dp/example1',
+    amazonLink: 'https://www.amazon.de/s?k=waldbaden+malbuch+erwachsene&tag=waldbadenguide-21',
     badge: 'Bestseller',
     pages: 50,
     features: ['50 detailreiche Waldmotive', 'Einseitig bedruckt', 'Hochwertiges 120g Papier', 'Ideal für Buntstifte & Fineliner'],
   },
   {
-    title: 'Waldgeister & Baumseelen',
+    title: 'Wald & Natur Malbuch',
     subtitle: 'Mystische Waldwelten zum Ausmalen',
     price: '14,99 €',
     rating: 4.9,
     reviews: 187,
     image: 'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=600&h=800&fit=crop',
-    amazonLink: 'https://amazon.de/dp/example2',
+    amazonLink: 'https://www.amazon.de/s?k=wald+natur+malbuch+erwachsene&tag=waldbadenguide-21',
     badge: 'Neu',
     pages: 60,
     features: ['60 mystische Motive', 'Mit Hintergrundgeschichten', 'Premium Papierqualität', 'Auch für Aquarellstifte'],
@@ -45,7 +46,7 @@ const malbuecher = [
     rating: 4.7,
     reviews: 156,
     image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=600&h=800&fit=crop',
-    amazonLink: 'https://amazon.de/dp/example3',
+    amazonLink: 'https://www.amazon.de/s?k=deutscher+wald+malbuch+natur&tag=waldbadenguide-21',
     pages: 45,
     features: ['45 heimische Waldszenen', 'Mit Baumkunde-Fakten', 'Entspannende Komplexität', 'Perfekt zum Verschenken'],
   },
@@ -56,7 +57,7 @@ const malbuecher = [
     rating: 4.8,
     reviews: 98,
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop',
-    amazonLink: 'https://amazon.de/dp/example4',
+    amazonLink: 'https://www.amazon.de/s?k=jahreszeiten+wald+malbuch&tag=waldbadenguide-21',
     badge: 'Premium',
     pages: 80,
     features: ['80 Motive in 4 Kapiteln', 'Frühling, Sommer, Herbst, Winter', 'Extra dickes Papier', 'Mit Achtsamkeitsübungen'],
@@ -182,14 +183,14 @@ export default function MalbuecherPage() {
                   </ul>
 
                   <div className="flex items-center gap-4">
-                    <span className="text-3xl font-bold text-forest-700">{book.price}</span>
+                    <span className="text-3xl font-bold text-forest-700">ab {book.price}</span>
                     <a
                       href={book.amazonLink}
                       target="_blank"
                       rel="noopener noreferrer nofollow"
                       className="amazon-btn inline-flex items-center gap-2 px-6 py-3 rounded-xl text-base"
                     >
-                      Bei Amazon kaufen* <ExternalLink className="w-4 h-4" />
+                      Auf Amazon suchen* <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
@@ -225,6 +226,24 @@ export default function MalbuecherPage() {
               </li>
             </ol>
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-forest-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-display font-bold text-white mb-4">
+            Mehr über Waldbaden erfahren?
+          </h2>
+          <p className="text-forest-200 mb-6">
+            Lerne die Grundlagen des Waldbadens mit unserer kostenlosen Anleitung.
+          </p>
+          <Link
+            href="/waldbaden-lernen/"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-forest-700 font-medium rounded-full hover:bg-forest-50 transition-colors"
+          >
+            Zur Anleitung
+          </Link>
         </div>
       </section>
     </main>
