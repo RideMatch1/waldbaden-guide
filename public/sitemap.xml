@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://waldbaden-guide.vercel.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/was-ist-waldbaden/</loc><priority>0.9</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/produkte/</loc><priority>0.9</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/malbuecher/</loc><priority>0.9</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/waldbaden-lernen/</loc><priority>0.8</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/blog/</loc><priority>0.8</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/kontakt/</loc><priority>0.5</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/faq/</loc><priority>0.6</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/impressum/</loc><priority>0.3</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/datenschutz/</loc><priority>0.3</priority></url>
+  <url><loc>https://waldbaden-guide.vercel.app/agb/</loc><priority>0.3</priority></url>
+</urlset>
